@@ -1015,12 +1015,140 @@ blockquote {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css 6.1.css">
+</head>
+<body>
+    <div class="card-grid">
+
+        <div class="Pokemon-card">
+            <div class="card-image" style="background-image: url('images/card/Pikachu\ Yellow\ Cheeks\ -\ PSA\ 9.jpeg');"></div>
+            <div class="card-details">
+                <h3 class="card-title">Pikachu 1999</h3>
+                <div class="card-price">฿250</div>
+                <div class="card-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+        <div class="Pokemon-card">
+            <div class="card-image" style="background-image: url('images/card/Illustration\ Rare\ Umbreon\ ex\ CGC\ 10.jfif');"></div>
+            <div class="card-details">
+                <h3 class="card-title">Illustration Rare Umbreon ex</h3>
+                <div class="card-price">฿300</div>
+                <div class="card-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+        <div class="Pokemon-card">
+            <div class="card-image" style="background-image: url('images/card/Charizard\ PSA\ 9.jpeg');"></div>
+            <div class="card-details">
+                <h3 class="card-title">Charizard</h3>
+                <div class="card-price">฿450</div>
+                <div class="card-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+        <div class="Pokemon-card">
+            <div class="card-image" style="background-image: url('images/card/Pikachu\ Illustrator\ PSA\ 9.jfif');"></div>
+            <div class="card-details">
+                <h3 class="card-title">Pikachu Illustrator</h3>
+                <div class="card-price">฿500</div>
+                <div class="card-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 4fr)); 
+    gap: 15px; 
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    width: 100%;
+    height: 150px; 
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-details {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1rem; 
+    margin: 0 0 10px 0;
+    color: #000000;
+}
+
+.card-price {
+    font-size: 1.1rem; 
+    color: #007bff;
+    font-weight: bold;
+}
+
+.card-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px; 
+}
+
+.add-to-cart {
+    background-color: #1500ff;
+    color: white;
+    border: none;
+    padding: 6px 12px; 
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #4f93dc;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    }
+
+    .product-title {
+        font-size: 0.9rem; 
+    }
+
+    .product-price {
+        font-size: 1rem; 
+    }
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![image](https://github.com/user-attachments/assets/21c46db9-8f21-4243-9f47-77b234caf5bb)
+
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
