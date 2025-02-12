@@ -387,9 +387,122 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Cards</title>
+    <link rel="stylesheet" href="css 2.2.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="Pokemon-card">
+            <div class="card-image" style="background-image: url('/images/card/Pikachu\ Yellow\ Cheeks\ -\ PSA\ 9.jpeg');"></div>
+            <div class="card-info">
+                <h2 class="card-title">Pikachu 1999 </h2>
+                <p class="card-price">฿250</p>
+                <p class="card-description">PSA 9</p>
+                <a href="#" class="card-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="Pokemon-card">
+            <div class="card-image" style="background-image: url('images/card/Illustration\ Rare\ Umbreon\ ex\ CGC\ 10.jfif');"></div>
+            <div class="card-info">
+                <h2 class="card-title">Illustration Rare Umbreon ex</h2>
+                <p class="card-price">฿300</p>
+                <p class="card-description">CGC 10</p>
+                <a href="#" class="card-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="Pokemon-card">
+            <div class="card-image" style="background-image: url('images/card/Charizard\ PSA\ 9.jpeg');"></div>
+            <div class="card-info">
+                <h2 class="card-title">Charizard</h2>
+                <p class="card-price">฿450</p>
+                <p class="card-description">PSA 9</p>
+                <a href="#" class="card-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="Pokemon-card">
+            <div class="card-image" style="background-image: url('images/card/Pikachu\ Illustrator\ PSA\ 9.jfif');"></div>
+            <div class="card-info">
+                <h2 class="card-title">Pikachu Illustrator</h2>
+                <p class="card-price">฿500</p>
+                <p class="card-description">PSA 9</p>
+                <a href="#" class="card-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+```css
+.Pokemon-card {
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+    background-color: white;
+    margin: 15px;
+    display: inline-block;
+}
+
+.card-image {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-title {
+    color: #333333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-price {
+    color: #007bff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-description {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card-button {
+    display: block;
+    background: linear-gradient(to right, #007bff, #000dff);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.card-button:hover {
+    background: linear-gradient(to right, #4fbeff, #003980);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+```
+![image](https://github.com/user-attachments/assets/bedef532-e258-46d7-ba77-8ddf5b89610c)
+
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
